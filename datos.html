@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Moises frontend</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <strong>Moises javascript</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <p class="lead text-muted">En este script utilizo los objeto window,document,screen y navigator para obtener datos del navegavor, ventana y dispositivo donde se esta visualizando la pagina web en el momento y los imprimo en pantalla.</p>
+      <p>Presiona abajo el boton "obtener datos" para ver los datos</p>
+    </div>
+  </section>
+<div class="container">
+	<p>el alto visible actual en tu pantalla es: <b id="altoventanavisible"></b></p>
+	 <p>el ancho visible actual en tu pantalla es: <b id="anchoventanavisible"></b></p>
+	 <p>el ancho de la pantalla de tu dis positivo es: <b id="anchodispositivo"></b></p>
+	 <p>el alto de la pantalla de tu dis positivo es: <b id="altodispositivo"></b></p>
+	 <p>el número de bits utilizados para mostrar un color en tu dispositivo  es: <b id="resolucion"></b></p>
+	 <p>el titulo de la ventana  es: <b id="title"></b></p>
+	 <p>el lenguaje de tu navegador   es: <b id="lenguajenavegador"></b></p>
+	 <p>el sistema operativo en el que estas  es: <b id="sistemaoperativo"></b></p>
+	 <p>la url de la pagina que estas viendo es: <b id="url"></b></p>
+	 <p>el host y el puerto es: <b id="host"></b></p>
+	 <p>el host name es: <b id="hostname"></b></p>
+	 <p>pathname es: <b id="pathname"></b></p>
+	 <p>port es: <b id="port"><b/></p>
+	 <p>protocol es: <b id="protocol"></b></p>
+	 <button class="btn btn-lg btn-block btn-primary" onclick="obtenerdatos()">obtener datos</button>
+</div>  
+</main>
+
+<footer class="text-center">
+  <div class="container">
+   <p>Scripts desarrollados por moises mannarino</p>
+  </div>
+</footer>
+<script type="text/javascript">
+ 	function obtenerdatos(){
+ 		var altoventanavisible=document.getElementById('altoventanavisible')
+	 	var anchoventanavisible=document.getElementById('anchoventanavisible')
+	 	var altodispositivo=document.getElementById('altodispositivo')
+	 	var anchodispositivo=document.getElementById('anchodispositivo')
+	 	var resolucion=document.getElementById('resolucion')
+	 	var title=document.getElementById('title')
+	 	var lenguajenavegador=document.getElementById('lenguajenavegador')
+	 	var sistemaoperativo=document.getElementById('sistemaoperativo')
+	 	var host=document.getElementById('host')
+	 	var hostname=document.getElementById('hostname')
+	 	var pathname=document.getElementById('pathname')
+	 	var port=document.getElementById('port')
+	 	var protocol=document.getElementById('protocol')
+
+	 	altoventanavisible.innerHTML= window.innerHeight
+	 	anchoventanavisible.innerHTML= window.innerWidth
+	 	altodispositivo.innerHTML= window.screen.height
+	 	anchodispositivo.innerHTML= window.screen.width
+	 	resolucion.innerHTML= window.screen.colorDepth
+	 	title.innerHTML= window.document.title
+	 	url.innerHTML= window.location
+	 	lenguajenavegador.innerHTML= window.navigator.language
+	 	sistemaoperativo.innerHTML= window.navigator.platform
+	 	host.innerHTML= window.location.host
+	 	hostname.innerHTML= window.location.hostname
+	 	pathname.innerHTML= window.location.pathname
+	 	port.innerHTML= window.location.port
+	 	protocol.innerHTML= window.location.protocol
+ 	}
+ 	
+ </script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
+</html>
